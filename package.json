@@ -1,6 +1,7 @@
 {
-  "name": "svelte-ui-tailwindcss",
+  "name": "gentosvelte-ui",
   "type": "module",
+  "description": "✨ A lightweight and reusable Svelte component library designed for modern web applications. This library provides customizable UI components built with Svelte and TailwindCSS for fast and efficient development.",
   "version": "1.0.0",
   "module": "./dist/components/index.js",
   "main": "./dist/components/index.js",
