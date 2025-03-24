@@ -1,1 +1,1 @@
-export { default as Carousel } from './lib/components/Carousel.svelte';
+export * from './lib/components/';
