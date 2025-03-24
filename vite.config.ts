@@ -5,12 +5,16 @@ export default defineConfig({
   plugins: [svelte()],
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: './src/lib/components/index.ts',
       formats: ['es'],
-      fileName: 'index'
+      fileName: (format) => `components/index.js`
     },
     rollupOptions: {
-      external: ['svelte']
+      external: ['svelte', '@iconify/svelte'],
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: 'src/lib'
+      }
     }
   }
 });
