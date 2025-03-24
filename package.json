@@ -1,34 +1,38 @@
 {
   "name": "svelte-components",
-  "module": "index.ts",
+  "module": "./dist/index.js",
   "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "svelte": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "svelte": "./dist/index.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": ["dist"],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && svelte-package --input ./src/lib",
     "dev": "vite",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+    "@sveltejs/vite-plugin-svelte": "^4.0.4",
     "@tsconfig/svelte": "^5.0.4",
     "@iconify/svelte": "^4.2.0",
-    "svelte-check": "^3.4.4",
+    "svelte-check": "^3.8.6",
     "@types/bun": "latest",
-    "svelte": "^5.25.3",
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "@sveltejs/package": "^2.3.10"
   },
   "peerDependencies": {
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "svelte": "^5.25.3"
   },
   "overrides": {
     "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"

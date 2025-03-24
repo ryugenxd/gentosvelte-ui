@@ -31,9 +31,16 @@
     "resolveJsonModule": true,
     "checkJs": true,
     "isolatedModules": true,
-    "outDir": "dist",
-    "declaration": true
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "rootDir": "./src",
+    "emitDeclarationOnly": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "exclude": ["node_modules/*", "dist/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
