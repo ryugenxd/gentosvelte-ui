@@ -11,7 +11,7 @@ npm install gentosvelte-ui
 ### BUN
 
 ```bash
-bun add c
+bun add gentosvelte-ui
 ```
 
 ### YARN 
